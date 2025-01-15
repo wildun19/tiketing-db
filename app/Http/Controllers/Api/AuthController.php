@@ -43,7 +43,7 @@ class AuthController extends Controller
 
         if($payload) {
             $user = User::where('email', $payload['email'])->first();
-            $token = $user->createToken('auth_token')->plainTextTekon;
+            $token = $user->createToken('auth_token')->plainTextToken;
             if ($user) {
                 return response()->json([
                     'status'=>'status',
