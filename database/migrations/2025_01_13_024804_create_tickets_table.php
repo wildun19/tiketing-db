@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('sku_id')->constrained()->onDelete('cascade');
             $table->string('ticket_code');
             $table->date('ticket_date')->nullable();
-            $table->enum('status', ['available', 'booked', 'redeem'])->default('available');
+            $table->enum('status', ['available', 'booked', 'sold', 'redeem'])->default('available');
             $table->timestamps();
         });
     }
